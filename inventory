@@ -1,0 +1,11 @@
+[iosxr]
+iosxr01 ansible_host=192.168.50.203
+
+[iosxr:vars]
+ansible_connection=local
+ansible_network_os=iosxr
+ansible_user=admin
+ansible_password=admin
+ansible_ssh_common_args='-o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o ProxyCommand="ssh -W %h:%p -q eve"'
+#ansible_ssh_common_args='-o ProxyCommand="ssh -W %h:%p -q eve"'
+ssh_type=libssh
